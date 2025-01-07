@@ -6,18 +6,18 @@
 /*   By: keanders <keanders@student.42london.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 11:08:46 by keanders          #+#    #+#             */
-/*   Updated: 2025/01/06 18:51:17 by keanders         ###   ########.fr       */
+/*   Updated: 2025/01/07 01:39:11 by keanders         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*   ft_calloc()	for memory allocation				      */
+/*   ft_calloc()	for memory allocation					   */
 /* ************************************************************************** */
-/*   Logical breakdown							      */
-/*   ft_split() needs to :-						      */
-/*   	Compute the wordcount  						      */
-/*   	Allocate memory for the a string array				      */
-/*   	Split the inpuy string into words based on the delimiters	      */
-/*   	Handle memory managment safely and effectively			      */
+/*   Logical breakdown								   */
+/*   ft_split() needs to :-							   */
+/*   	Compute the wordcount  							   */
+/*   	Allocate memory for the a string array					   */
+/*   	Split the inpuy string into words based on the delimiters		   */
+/*   	Handle memory managment safely and effectively				   */
 /* ************************************************************************** */
 
 #include "libft.h"
@@ -69,7 +69,7 @@ static char	*get_next_word(const char **s, char c)
 
 static char	**build_result(char **result, const char *s, char c, int numb_words)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (i < numb_words)
@@ -91,7 +91,7 @@ char	**ft_split(const char *s, char c)
 {
 	char	**result;
 	int		numb_words;
-	
+
 	if (!s)
 		return (NULL);
 	numb_words = word_count(s, c);
